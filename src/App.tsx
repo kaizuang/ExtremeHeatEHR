@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: Copyright Orangebot, Inc. and Medplum contributors
 // SPDX-License-Identifier: Apache-2.0
 import { AppShell, ErrorBoundary, Loading, Logo, useMedplum, useMedplumProfile } from '@medplum/react';
-import { IconUser } from '@tabler/icons-react';
+import { IconUser,IconSettings2 } from '@tabler/icons-react';
 import { Suspense } from 'react';
 import type { JSX } from 'react';
 import { Route, Routes } from 'react-router';
@@ -14,6 +14,7 @@ import { PatientPage } from './pages/PatientPage';
 import { ResourcePage } from './pages/ResourcePage';
 import { ResourceCreatePage } from './pages/ResourceCreatePage';
 import { SignInPage } from './pages/SignInPage';
+import { RuleBuilderPage } from './pages/RuleBuilderPage';
 
 export function App(): JSX.Element | null {
   const medplum = useMedplum();
@@ -29,7 +30,12 @@ export function App(): JSX.Element | null {
       menus={[
         {
           title: 'My Links',
-          links: [{ icon: <IconUser />, label: 'Patients', href: '/' }],
+          links: [
+                  { icon: <IconUser />, label: 'Patients', href: '/' },
+                  { icon: <IconSettings2 />, label: 'Rule Builder', href: '/rules/new' }
+                ],
+                  
+
         },
       ]}
     >
@@ -38,6 +44,7 @@ export function App(): JSX.Element | null {
           <Routes>
             <Route path="/" element={profile ? <HomePage /> : <LandingPage />} />
             <Route path="/signin" element={<SignInPage />} />
+            <Route path="/rules/new" element={<RuleBuilderPage />} />
             <Route path="/Patient/new" element={<ResourceCreatePage />} />
             <Route path="/Patient/:id" element={<PatientPage />}>
               <Route index element={<PatientOverview />} />
