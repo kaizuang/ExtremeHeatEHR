@@ -23,7 +23,7 @@
     "@medplum/core": "5.1.24",
     "@medplum/eslint-config": "5.1.24",
     "@medplum/fhirtypes": "5.1.24",
-    "@medplum/react": "5.1.24",
+    "@medplum/react": "5.1.28",
     "@tabler/icons-react": "3.44.0",
     "@types/node": "22.20.0",
     "@types/react": "19.2.17",
