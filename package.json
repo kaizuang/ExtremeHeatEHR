@@ -21,7 +21,7 @@
     "@mantine/notifications": "8.3.18",
     "@mantine/spotlight": "8.3.18",
     "@medplum/core": "5.1.24",
-    "@medplum/eslint-config": "5.1.24",
+    "@medplum/eslint-config": "5.1.37",
     "@medplum/fhirtypes": "5.1.24",
     "@medplum/react": "5.1.24",
     "@tabler/icons-react": "3.44.0",
